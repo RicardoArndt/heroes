@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 
 const heroesRoutes: Routes = [
   {path: 'heroes', component: HeroesComponent, children:[
-    {path: 'details', component: HeroDetailComponent}
+    {path: 'detail/:id', component: HeroDetailComponent}
   ]}
 ];
 

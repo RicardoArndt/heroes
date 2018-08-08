@@ -1,0 +1,15 @@
+.required {
+    color: red;
+}
+
+.required:after {
+ content: '*Este campo é requerido'
+}
+
+.max {
+    color: red;
+}
+
+.max > span:before {
+    content: 'Valor máximo atingido! '
+}

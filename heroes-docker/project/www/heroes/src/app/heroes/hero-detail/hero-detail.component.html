@@ -1,3 +1,21 @@
-<p>
-  hero-detail works!
-</p>
+<div class="panel panel-primary"> 
+  <div class="panel-heading">
+    {{ hero.name ? hero.name : 'Novo Documento' }}
+  </div>
+
+  <div class="panel-body">
+    <app-hero-form [hero]="hero"></app-hero-form>
+  </div>
+
+  <div class="panel-footer">
+    <button (click)="ex()" class="btn btn-success">Comparar</button>
+    <button (click)="novo.open()" class="btn btn-primary">Novo</button> 
+    <a (click)="ex()" class="btn btn-danger">Deletar</a> 
+  </div>
+</div>
+
+<modal #novo>
+  <modal-content>
+    <app-hero-form></app-hero-form>
+  </modal-content>
+</modal>
