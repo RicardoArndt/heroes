@@ -53,6 +53,14 @@ export class HeroFormComponent implements OnInit {
     }
   };
 
+  onSubmit() {
+    if (this.hero){
+      console.log("UPDATE");
+    }else{
+      console.log("SAVE");
+    }
+  }
+
   getInfo(valor: any): string {
     if (valor != null && valor.actual > valor.max)
       return valor.max;
