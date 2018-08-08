@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
-import {RouterModule} from '@angular/router';
-import {HEROES_ROUTES} from './heroes.routing';
-import {BrowserModule} from '@angular/platform-browser';
-import {HeroSearchComponent} from './hero-search/hero-search.component';
+import { RouterModule } from '@angular/router';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroesComponent } from './heroes.component';
+import { HeroesRoutingModule } from './heroes-routing.module';
+import { OwlModule } from 'ngx-owl-carousel';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
     HeroSearchComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeroesComponent
   ],
   imports: [
-    BrowserModule,
-    RouterModule.forChild(HEROES_ROUTES)
+    CommonModule,
+    HeroesRoutingModule,
+    OwlModule
   ],
   providers: []
 })

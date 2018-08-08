@@ -1,3 +1,9 @@
-<p>
-  heroes works!
-</p>
+<owl-carousel  [options]="{items: 4, dots: true, navigation: true, lazyLoad: true}" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+  <div class="item" *ngFor="let image of images">
+    <div class="thumbnail-image"><a routerLink="details"><img [src]="image.url" /></a></div>
+  </div>
+</owl-carousel>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
