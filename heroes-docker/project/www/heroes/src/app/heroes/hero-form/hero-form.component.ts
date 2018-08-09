@@ -57,7 +57,7 @@ export class HeroFormComponent implements OnInit {
     if (this.hero){
       console.log("UPDATE");
     }else{
-      console.log("SAVE");
+      console.log("SAVEa");
     }
   }
 
