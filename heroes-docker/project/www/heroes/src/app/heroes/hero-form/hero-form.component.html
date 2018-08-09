@@ -1,7 +1,9 @@
+<ngx-loading [show]="loading"></ngx-loading>
+
 <form [formGroup]="heroForm" (ngSubmit)="onSubmit()" novalidade>
   <div class="form-group">
     <label [ngClass]="{'required': !heroForm.value.name}">Name: </label><input class="form-control" type="text" formControlName="name">
-    <label>Image: </label><input class="form-control" type="file" (change)="onFileChange($event)">
+    <label>Image: </label><image-upload (change)="onFileChange($event)"></image-upload>
     <label [ngClass]="{'required': !heroForm.value.atack, 
                         'max': heroForm.controls.atack._errors?.max}">Atack: <span>{{ getInfo(heroForm.controls.atack._errors?.max) }}</span></label><input class="form-control" type="number" formControlName="atack">
     <label [ngClass]="{'required': !heroForm.value.defense, 

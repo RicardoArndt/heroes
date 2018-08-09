@@ -1,13 +1,15 @@
-import { HeroSearchComponent } from './hero-search/hero-search.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { Routes, RouterModule } from '@angular/router';
-import { HeroesComponent } from './heroes.component';
-import { NgModule } from '@angular/core';
+import {HeroSearchComponent} from './hero-search/hero-search.component';
+import {HeroDetailComponent} from './hero-detail/hero-detail.component';
+import {Routes, RouterModule} from '@angular/router';
+import {HeroesComponent} from './heroes.component';
+import {NgModule} from '@angular/core';
 
 const heroesRoutes: Routes = [
-  {path: 'heroes', component: HeroesComponent, children:[
-    {path: 'detail/:id', component: HeroDetailComponent}
-  ]}
+  {
+    path: 'heroes', component: HeroesComponent, children: [
+      {path: 'detail/:id', component: HeroDetailComponent}
+    ]
+  }
 ];
 
 
@@ -20,4 +22,5 @@ const heroesRoutes: Routes = [
   ]
 })
 
-export class HeroesRoutingModule {}
+export class HeroesRoutingModule {
+}

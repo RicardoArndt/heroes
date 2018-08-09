@@ -7,6 +7,8 @@ import { CommonModule } from '@angular/common';
 import { HeroFormModule } from './hero-form/hero-form.module';
 import { HeroDetailModule } from './hero-detail/hero-detail.module';
 import { HeroSearchModule } from './hero-search/hero-search.module';
+import { HeroService } from './service/hero.service';
+import { LoadingModule } from 'ngx-loading';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,16 @@ import { HeroSearchModule } from './hero-search/hero-search.module';
     HeroFormModule,
     HeroDetailModule,
     HeroSearchModule,
-    ModalModule
+    ModalModule,
+    LoadingModule
   ],
   exports: [
     OwlModule,
     ModalModule,
-    HeroesRoutingModule
+    HeroesRoutingModule,
   ],
-  providers: []
+  providers: [
+    HeroService
+  ]
 })
 export class HeroesModule { }

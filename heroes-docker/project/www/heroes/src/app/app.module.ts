@@ -5,7 +5,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { OwlModule } from 'ngx-owl-carousel';
 import { HeroesModule } from './heroes/heroes.module';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
+import {LoadingModule} from 'ngx-loading';
+import {ImageUploadModule} from 'angular2-image-upload';
 
 @NgModule({
   declarations: [
@@ -18,6 +23,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeroesModule,
     OwlModule,
     FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right'
+    }),
+    LoadingModule.forRoot({
+      backdropBackgroundColour: 'rgba(255, 255, 255, 1)',
+      primaryColour: '#337ab7',
+      secondaryColour: '#337ab7',
+      tertiaryColour: '#337ab7'
+    }),
+    HttpClientModule,
+    ImageUploadModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

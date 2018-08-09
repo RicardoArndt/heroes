@@ -1,3 +1,7 @@
+<ngx-loading [show]="loading"></ngx-loading>
+
+<app-hero-search [heroes]="heroes" (onSearch)="search($event)"></app-hero-search>
+
 <owl-carousel  [options]="{items: 4, dots: true, navigation: true, lazyLoad: true}" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
   <div class="item" *ngFor="let hero of heroes">
     <div class="thumbnail-image"><a [routerLink]="['detail/', hero.id]"><img [src]="hero.image" /></a></div>

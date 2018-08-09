@@ -1,7 +1,7 @@
 export class Hero {
-    public constructor(public id: number, 
+    public constructor(public id: string,
                         public name: string,
-                        public image: string, 
+                        public image: Blob,
                         public atack: number, 
                         public defense: number){
 

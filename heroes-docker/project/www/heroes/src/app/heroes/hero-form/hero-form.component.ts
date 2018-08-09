@@ -1,6 +1,9 @@
-import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-import { Hero } from '../hero-detail/hero.model';
+import {Component, OnInit, Input, ChangeDetectorRef} from '@angular/core';
+import {FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {Hero} from '../hero-detail/hero.model';
+import {ToastrService} from 'ngx-toastr';
+import {HeroService} from '../service/hero.service';
+import {HeroesError} from '../../error/HeroesError';
 
 @Component({
   selector: 'app-hero-form',
@@ -11,9 +14,16 @@ export class HeroFormComponent implements OnInit {
 
   @Input() hero: Hero;
 
+  public loading;
+
   heroForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private cd: ChangeDetectorRef) { }
+  constructor(private fb: FormBuilder,
+              private cd: ChangeDetectorRef,
+              private heroService: HeroService,
+              private heroError: HeroesError,
+              private toastr: ToastrService) {
+  }
 
   ngOnInit() {
     this.createForm();
@@ -38,26 +48,48 @@ export class HeroFormComponent implements OnInit {
     }
   }
 
-  onFileChange(event) {
-    let reader = new FileReader();
+  onFileChange($event) {
+    const reader = new FileReader();
+    const image = this.heroForm.controls['image'];
+    const blob = new Blob([image]);
 
-    if (event.target.files && event.files.length) {
-      const [file] = event.target.files;
-      reader.readAsDataURL(file);
+    reader.addEventListener('load', () => {
+      image.setValue(reader.result);
+    }, false);
 
-      this.heroForm.patchValue({
-        file: reader.result
-      });
-
-      this.cd.markForCheck();
+    if (blob) {
+      reader.readAsDataURL(blob);
     }
-  };
+  }
 
   onSubmit() {
-    if (this.hero){
-      console.log("UPDATE");
-    }else{
-      console.log("SAVEa");
+    this.loading = true;
+
+    if (this.hero) {
+      this.heroService.update(this.hero).subscribe(response => {
+        this.loading = false;
+        this.toastr.success('Cadastrado com sucesso', 'Success!');
+      }, error => {
+        this.loading = false;
+        this.heroError.handleError(error);
+      });
+    } else {
+      this.hero = new Hero('', this.heroForm.value.name,
+        this.heroForm.value.image,
+        this.heroForm.value.atack,
+        this.heroForm.value.defense);
+
+
+      console.log(this.hero);
+
+      this.heroService.saveHero(this.hero)
+        .subscribe(response => {
+          this.loading = false;
+          this.hero = response;
+        }, error => {
+          this.loading = false;
+          this.heroError.handleError(error);
+        });
     }
   }
 

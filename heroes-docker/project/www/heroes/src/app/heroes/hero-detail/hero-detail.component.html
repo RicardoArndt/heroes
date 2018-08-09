@@ -1,4 +1,6 @@
-<div class="panel panel-primary"> 
+<ngx-loading [show]="loading"></ngx-loading>
+
+<div class="panel panel-primary">
   <div class="panel-heading">
     {{ hero.name }}
   </div>
@@ -8,9 +10,9 @@
   </div>
 
   <div class="panel-footer">
-    <button (click)="ex()" class="btn btn-success">Comparar</button>
+    <!--<button (click)="ex()" class="btn btn-success">Comparar</button>-->
     <button (click)="novo.open()" class="btn btn-primary">Novo</button> 
-    <a (click)="ex()" class="btn btn-danger">Deletar</a>
+    <button (click)="onDelete(hero.id)" class="btn btn-danger">Deletar</button>
   </div>
 </div>
 
