@@ -29,3 +29,5 @@ C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\He
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\MongoDB.Driver.Core.xml
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\DnsClient.xml
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\obj\Debug\Heroes.Service.csproj.CopyComplete
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Newtonsoft.Json.xml

@@ -21,7 +21,7 @@ namespace Heroes.Global.DTO
             Defense = defense;
         }
 
-        public static HeroDTO Create(Hero hero) {
+        public HeroDTO Create(Hero hero) {
             return new HeroDTO(hero.Id.ToString(), hero.Name.ToString(), hero.Images, hero.Atack, hero.Defense);
         }
 }

@@ -8,3 +8,5 @@ C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\He
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\MongoDB.Bson.dll
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\MongoDB.Bson.xml
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\obj\Debug\Heroes.Global.csproj.CopyComplete
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\Newtonsoft.Json.xml

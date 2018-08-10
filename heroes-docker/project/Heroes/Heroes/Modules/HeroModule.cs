@@ -1,9 +1,12 @@
 ﻿using Heroes.Database.Repositories.Interfaces;
 using Heroes.DependencyInjection.Infra.Interfaces;
+using Heroes.Global.DTO;
 using Heroes.Global.Entities;
+using Heroes.RestDomain;
 using Nancy;
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Heroes.Modules
 {
@@ -15,16 +18,18 @@ namespace Heroes.Modules
         {
             _heroRepository = injection.IHeroRepositoryInstance;
 
-            Get["/"] = parameters =>
+            Get[EndpointConfiguration.GET_ALL_HEROES.PATH] = parameters =>
             {
                 try
                 {
-                    List<Hero> produtos = _heroRepository.GetAll();
-                    return HttpStatusCode.OK;
+                    List<Hero> heroes = _heroRepository.GetAll();
+
+                    var heroesJson = JsonConvert.SerializeObject(heroes);
+
+                    return heroesJson;
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("EXCEPTION MODULE");
                     Console.WriteLine(ex.Message);
                     return HttpStatusCode.BadGateway;
                 }

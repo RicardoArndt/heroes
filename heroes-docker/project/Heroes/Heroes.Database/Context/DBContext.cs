@@ -11,7 +11,6 @@ namespace Heroes.Database.Context
 
         public IMongoCollection<T> getCollection(string entity)
         {
-            Console.WriteLine("Não entrou");
             return database.GetCollection<T>(entity);
         }
     }
