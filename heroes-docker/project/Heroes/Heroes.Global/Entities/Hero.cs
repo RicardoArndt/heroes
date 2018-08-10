@@ -1,0 +1,26 @@
+﻿using Heroes.Global.Entities.Interfaces;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System.Collections.Generic;
+
+namespace Heroes.Global.Entities
+{
+    /// <summary>
+    /// Entidade Hero que implementa um IEntity<Hero>
+    /// </summary>
+
+    public class Hero : IEntity<Hero>
+    {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+        [BsonElement("name")]
+        public string Name { get; set; }
+        [BsonElement("images")]
+        public List<Image> Images { get; set; }
+        [BsonElement("atack")]
+        public string Atack { get; set; }
+        [BsonElement("defense")]
+        public string Defense { get; set; }
+    }
+}

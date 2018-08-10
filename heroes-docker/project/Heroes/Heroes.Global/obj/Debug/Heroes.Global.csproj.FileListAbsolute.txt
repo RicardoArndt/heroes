@@ -1,0 +1,10 @@
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\obj\Debug\Heroes.Global.csprojAssemblyReference.cache
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\obj\Debug\Heroes.Global.csproj.CoreCompileInputs.cache
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\Heroes.Global.exe.config
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\Heroes.Global.exe
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\Heroes.Global.pdb
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\obj\Debug\Heroes.Global.exe
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\obj\Debug\Heroes.Global.pdb
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\MongoDB.Bson.dll
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\MongoDB.Bson.xml
+C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\obj\Debug\Heroes.Global.csproj.CopyComplete
