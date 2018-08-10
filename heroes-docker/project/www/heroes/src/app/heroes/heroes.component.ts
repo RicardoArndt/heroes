@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Hero} from './hero-detail/hero.model';
+import {Hero} from './models/hero.model';
 import {HeroService} from './service/hero.service';
 import {HeroesError} from '../error/HeroesError';
 import {ToastrService} from 'ngx-toastr';
-import {reject, resolve} from 'q';
 
 @Component({
   selector: 'app-heroes',
@@ -16,35 +15,35 @@ export class HeroesComponent implements OnInit {
     {
       id: '1',
       name: 'Superman',
-      image: null,
+      images: null,
       atack: 1000,
       defense: 600
     },
     {
       id: '2',
       name: 'Aquaman',
-      image: null,
+      images: null,
       atack: 900,
       defense: 500
     },
     {
       id: '3',
       name: 'Aquaman',
-      image: null,
+      images: null,
       atack: 900,
       defense: 500
     },
     {
       id: '4',
       name: 'Aquaman',
-      image: null,
+      images: null,
       atack: 900,
       defense: 500
     },
     {
       id: '5',
       name: 'Aquaman',
-      image: null,
+      images: null,
       atack: 900,
       defense: 500
     }
@@ -77,8 +76,8 @@ export class HeroesComponent implements OnInit {
   }
 
   search(response: any) {
-    console.log(response);
-    // this.heroes = response.heroes;
+    console.log(response.event);
+    this.searchHeroes = response.event;
   }
 
 }

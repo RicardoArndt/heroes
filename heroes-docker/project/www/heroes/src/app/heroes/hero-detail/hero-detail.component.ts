@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Hero} from './hero.model';
+import {Hero} from '../models/hero.model';
 import {HeroService} from '../service/hero.service';
 import {HeroesError} from '../../error/HeroesError';
 import {ToastrService} from 'ngx-toastr';
@@ -23,7 +23,7 @@ export class HeroDetailComponent implements OnInit {
   hero: Hero = {
     id: '1',
     name: 'Superman',
-    image: null,
+    images: null,
     atack: 1000,
     defense: 600
   };

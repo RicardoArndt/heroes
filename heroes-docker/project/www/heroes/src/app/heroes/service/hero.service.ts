@@ -1,7 +1,7 @@
 import {ErrorHandler, Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DEV } from '../../dev';
-import {Hero} from '../hero-detail/hero.model';
+import {Hero} from '../models/hero.model';
 import {Observable} from '../../../../node_modules/rxjs';
 import {catchError} from 'rxjs/operators';
 import {ToastrService} from 'ngx-toastr';

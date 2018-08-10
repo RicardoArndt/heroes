@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Hero} from '../hero-detail/hero.model';
+import {Hero} from '../models/hero.model';
 
 @Component({
   selector: 'app-hero-search',
@@ -18,9 +18,7 @@ export class HeroSearchComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   private filter(term: string) {
     return this.heroes.filter(item => item.name.toLowerCase().indexOf(term.toLowerCase()) !== -1);

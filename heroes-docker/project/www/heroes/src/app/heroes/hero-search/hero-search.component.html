@@ -1,1 +1,4 @@
-<input #searchBox (keyup)="search(searchBox.value)">
+<div class="alert alert-info">
+  <label for="search">Busque aqui pelo herói </label>
+  <input #searchBox id="search" class="form-control" (keyup)="search(searchBox.value)">
+</div>

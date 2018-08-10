@@ -2,12 +2,20 @@
 
 <form [formGroup]="heroForm" (ngSubmit)="onSubmit()" novalidade>
   <div class="form-group">
-    <label [ngClass]="{'required': !heroForm.value.name}">Name: </label><input class="form-control" type="text" formControlName="name">
-    <label>Image: </label><image-upload (change)="onFileChange($event)"></image-upload>
-    <label [ngClass]="{'required': !heroForm.value.atack, 
-                        'max': heroForm.controls.atack._errors?.max}">Atack: <span>{{ getInfo(heroForm.controls.atack._errors?.max) }}</span></label><input class="form-control" type="number" formControlName="atack">
-    <label [ngClass]="{'required': !heroForm.value.defense, 
-                        'max': heroForm.controls.defense._errors?.max}">Defense: </label><input class="form-control" type="number" formControlName="defense">
+    <label [ngClass]="{'required': !heroForm.value.name}">Name: </label>
+    <input class="form-control" type="text" formControlName="name">
+
+    <label>Image: </label>
+    <image-upload (change)="onFileChange($event)"></image-upload>
+    <!--<input type="file" (change)="onFileChange($event)">-->
+
+    <label [ngClass]="{'required': !heroForm.value.atack,
+                        'max': heroForm.controls.atack._errors?.max}">Atack: <span>{{ getInfo(heroForm.controls.atack._errors?.max) }}</span></label>
+    <input class="form-control" type="number" formControlName="atack">
+
+    <label [ngClass]="{'required': !heroForm.value.defense,
+                        'max': heroForm.controls.defense._errors?.max}">Defense: </label>
+    <input class="form-control" type="number" formControlName="defense">
   </div>
 
   <button type="submit" class="btn btn-primary" [disabled]="heroForm.invalid">Enviar</button>
