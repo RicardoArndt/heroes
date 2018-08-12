@@ -1,7 +1,5 @@
 ﻿using Heroes.Database.Repositories.Interfaces;
 using Heroes.Global.Entities;
-using System;
-using System.Collections.Generic;
 
 namespace Heroes.Database.Repositories
 {
@@ -13,17 +11,5 @@ namespace Heroes.Database.Repositories
         {
             Entity = ENTITY;
         }
-
-        public override Hero GetById(string id)
-        {
-            return base.GetById(id);
-        }
-
-        public override List<Hero> GetAll()
-        {
-            Console.WriteLine("Aqui");
-            return base.GetAll();
-        }
-        
     }
 }

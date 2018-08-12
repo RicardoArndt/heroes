@@ -31,3 +31,36 @@ C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\He
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\obj\Debug\Heroes.Service.csproj.CopyComplete
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\obj\Debug\Heroes.Service.csprojAssemblyReference.cache
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\obj\Debug\Heroes.Service.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\obj\Debug\Heroes.exe
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\obj\Debug\Heroes.pdb
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Heroes.exe.config
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Heroes.exe
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Heroes.pdb
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Heroes.Database.exe
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Heroes.Global.exe
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Nancy.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Nancy.Hosting.Self.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Nancy.Owin.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Owin.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\MongoDB.Driver.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\MongoDB.Bson.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\DnsClient.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\System.Buffers.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Heroes.Database.pdb
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Heroes.Database.exe.config
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Heroes.Global.pdb
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Heroes.Global.exe.config
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Nancy.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Nancy.Hosting.Self.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Nancy.Owin.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\MongoDB.Driver.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\MongoDB.Bson.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\bin\Debug\DnsClient.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes\obj\Debug\Heroes.Service.csproj.CopyComplete

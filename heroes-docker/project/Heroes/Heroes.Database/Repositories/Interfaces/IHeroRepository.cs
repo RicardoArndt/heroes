@@ -1,4 +1,5 @@
-﻿using Heroes.Global.Entities;
+﻿using Heroes.Global.DTO;
+using Heroes.Global.Entities;
 using System.Collections.Generic;
 
 namespace Heroes.Database.Repositories.Interfaces

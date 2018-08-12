@@ -10,3 +10,15 @@ C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\He
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\obj\Debug\Heroes.Global.csproj.CopyComplete
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\obj\Debug\Heroes.Global.csprojAssemblyReference.cache
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\obj\Debug\Heroes.Global.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\obj\Debug\Heroes.Global.exe
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\obj\Debug\Heroes.Global.pdb
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\Heroes.Global.exe.config
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\Heroes.Global.exe
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\Heroes.Global.pdb
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\MongoDB.Bson.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\MongoDB.Bson.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Global\obj\Debug\Heroes.Global.csproj.CopyComplete

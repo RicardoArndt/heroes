@@ -1,5 +1,5 @@
 export class Image {
-  public constructor(public filename: string,
-                     public filetype: string,
-                     public value: any) {}
+  public constructor(public Filename: string,
+                     public Filetype: string,
+                     public Value: any) {}
 }

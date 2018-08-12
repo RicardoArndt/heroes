@@ -1,8 +1,8 @@
 <ngx-loading [show]="loading"></ngx-loading>
 
-<div class="panel panel-primary">
+<div class="panel panel-primary" *ngIf="hero">
   <div class="panel-heading">
-    {{ hero.name }}
+    {{ hero.Name }}
   </div>
 
   <div class="panel-body">
@@ -11,8 +11,8 @@
 
   <div class="panel-footer">
     <!--<button (click)="ex()" class="btn btn-success">Comparar</button>-->
-    <button (click)="novo.open()" class="btn btn-primary">Novo</button> 
-    <button (click)="onDelete(hero.id)" class="btn btn-danger">Deletar</button>
+    <button (click)="novo.open()" class="btn btn-primary">Novo</button>
+    <button (click)="onDelete(hero.Id)" class="btn btn-danger">Deletar</button>
   </div>
 </div>
 

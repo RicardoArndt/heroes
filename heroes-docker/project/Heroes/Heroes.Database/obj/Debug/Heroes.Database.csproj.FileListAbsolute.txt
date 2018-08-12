@@ -19,3 +19,26 @@ C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\He
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\MongoDB.Driver.xml
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\MongoDB.Driver.Core.xml
 C:\Users\ricardo.arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\obj\Debug\Heroes.Database.csproj.CopyComplete
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\Heroes.Database.exe.config
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\Heroes.Database.exe
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\Heroes.Database.pdb
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\DnsClient.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\Heroes.Global.exe
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\MongoDB.Bson.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\MongoDB.Driver.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\System.Buffers.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\Heroes.Global.pdb
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\Heroes.Global.exe.config
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\DnsClient.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\MongoDB.Bson.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\MongoDB.Driver.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\obj\Debug\Heroes.Database.csprojAssemblyReference.cache
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\obj\Debug\Heroes.Database.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\obj\Debug\Heroes.Database.csproj.CopyComplete
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\obj\Debug\Heroes.Database.exe
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\obj\Debug\Heroes.Database.pdb
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ricardo Arndt\Documents\Projetos\heroes\heroes-docker\project\Heroes\Heroes.Database\bin\Debug\Newtonsoft.Json.xml

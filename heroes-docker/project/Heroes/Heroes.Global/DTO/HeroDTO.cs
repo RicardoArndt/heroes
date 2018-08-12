@@ -1,20 +1,20 @@
 ﻿using Heroes.Global.Entities;
+using Heroes.Global.Entities.Interfaces;
 using System.Collections.Generic;
 
 namespace Heroes.Global.DTO
 {
     public class HeroDTO
     {
-        private string Id { get; set; }
-        private string Name { get; set; }
-        private List<Image> Images { get; set; }
-        private string Atack { get; set; }
-        private string Defense { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public List<Image> Images { get; set; }
+        public int Atack { get; set; }
+        public int Defense { get; set; }
 
         public HeroDTO() { }
 
-        public HeroDTO(string id, string name, List<Image> images, string atack, string defense) {
-            Id = id;
+        public HeroDTO(string name, List<Image> images, int atack, int defense) {
             Name = name;
             Images = images;
             Atack = atack;
@@ -22,7 +22,7 @@ namespace Heroes.Global.DTO
         }
 
         public HeroDTO Create(Hero hero) {
-            return new HeroDTO(hero.Id.ToString(), hero.Name.ToString(), hero.Images, hero.Atack, hero.Defense);
+            return new HeroDTO(hero.Name.ToString(), hero.Images, hero.Atack, hero.Defense);
         }
 }
 }

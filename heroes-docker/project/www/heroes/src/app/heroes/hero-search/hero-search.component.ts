@@ -21,7 +21,7 @@ export class HeroSearchComponent implements OnInit {
   ngOnInit() {}
 
   private filter(term: string) {
-    return this.heroes.filter(item => item.name.toLowerCase().indexOf(term.toLowerCase()) !== -1);
+    return this.heroes.filter(item => item.Name.toLowerCase().indexOf(term.toLowerCase()) !== -1);
   }
 
 }

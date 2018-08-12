@@ -18,21 +18,17 @@ export class HeroDetailComponent implements OnInit {
               private route: ActivatedRoute) {
   }
 
-  public loading;
-
-  hero: Hero = {
-    id: '1',
-    name: 'Superman',
-    images: null,
-    atack: 1000,
-    defense: 600
-  };
+  loading;
+  hero: Hero;
 
   ngOnInit() {
-    this.heroService.getById(this.route.params['id']).subscribe(response => {
+    this.loading = true;
+
+    this.heroService.getById(this.route.snapshot.params['id']).subscribe(response => {
       this.loading = false;
-      this.toastr.success('Busca concluída com sucesso', 'Success!');
+      console.log(response);
       this.hero = response;
+      this.toastr.success('Busca concluída com sucesso', 'Success!');
     }, error => {
       this.loading = false;
       this.heroError.handleError(error);
@@ -45,10 +41,9 @@ export class HeroDetailComponent implements OnInit {
     this.heroService.delete(id).subscribe(() => {
       this.loading = false;
       this.toastr.success('Deletado com sucesso', 'Success!');
-    }, error => {
-      this.loading = false;
-      this.heroError.handleError(error);
     });
+
+    location.reload();
   }
 
 }

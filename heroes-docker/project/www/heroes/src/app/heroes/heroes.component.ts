@@ -11,47 +11,10 @@ import {ToastrService} from 'ngx-toastr';
 })
 export class HeroesComponent implements OnInit {
 
-  public heroes: Hero[] = [
-    {
-      id: '1',
-      name: 'Superman',
-      images: null,
-      atack: 1000,
-      defense: 600
-    },
-    {
-      id: '2',
-      name: 'Aquaman',
-      images: null,
-      atack: 900,
-      defense: 500
-    },
-    {
-      id: '3',
-      name: 'Aquaman',
-      images: null,
-      atack: 900,
-      defense: 500
-    },
-    {
-      id: '4',
-      name: 'Aquaman',
-      images: null,
-      atack: 900,
-      defense: 500
-    },
-    {
-      id: '5',
-      name: 'Aquaman',
-      images: null,
-      atack: 900,
-      defense: 500
-    }
-  ];
-
+  public heroes: Hero[];
   public searchHeroes: Hero[];
-
   public loading = false;
+  public p = 1;
 
   constructor(private heroService: HeroService,
               private heroError: HeroesError,
@@ -65,19 +28,22 @@ export class HeroesComponent implements OnInit {
       .subscribe(response => {
           this.loading = false;
           this.heroes = response;
+          console.log(this.heroes);
           this.toastr.success('Heróis buscados com sucesso', 'Listagem');
         },
         error => {
           this.loading = false;
           this.heroError.handleError(error);
         });
-
-    console.log(this.heroes);
   }
 
   search(response: any) {
     console.log(response.event);
     this.searchHeroes = response.event;
+  }
+
+  onReload() {
+    location.reload();
   }
 
 }

@@ -3,6 +3,7 @@ using Heroes.Database.Repositories.Interfaces;
 using Heroes.Global.Entities.Interfaces;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 
 namespace Heroes.Database.Repositories
@@ -32,18 +33,18 @@ namespace Heroes.Database.Repositories
 
         public virtual void Update(T entity, string documentId)
         {
-            var filter = Builders<T>.Filter.Eq("Id", documentId);
-
             var properties = entity.GetType().GetProperties();
-            
-            UpdateDefinition<T> update = null;
 
+            UpdateDefinition<T> update = null;
+            
             foreach (var p in properties)
             {
-                update = Builders<T>.Update.Set(p.ToString(), p.GetValue(entity));
+                update = Builders<T>.Update.Set(p.Name, entity.GetType().GetProperty(p.Name).GetValue(entity));
+                if (p.Name != "Id")
+                {
+                    _collection.UpdateOne(t => t.Id == documentId, update);
+                }
             };
-
-            _collection.UpdateOne(filter, update);
         }
 
         public virtual T GetById(string documentId)

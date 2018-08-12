@@ -14,13 +14,13 @@ namespace Heroes.RestDomain
         private static string HEROES = "heroes";
         private static string INSERT = "insert";
         private static string DELETE = "delete";
-        private static string GET_BY_ID = "buscaToId";
+        private static string GET_BY_ID = "detail";
         private static string UPDATE = "update";
 
         public static EndpointConfiguration GET_ALL_HEROES = new EndpointConfiguration(ROOT, HEROES);
-        public static EndpointConfiguration GET_PRODUTO_BY_ID = new EndpointConfiguration(ROOT, HEROES, GET_BY_ID, "{id}");
+        public static EndpointConfiguration GET_HERO_BY_ID = new EndpointConfiguration(ROOT, HEROES, GET_BY_ID, "{id}");
         public static EndpointConfiguration INSERT_HERO = new EndpointConfiguration(ROOT, HEROES, INSERT);
-        public static EndpointConfiguration DELETE_HERO = new EndpointConfiguration(ROOT, HEROES, DELETE, "{documentId}");
+        public static EndpointConfiguration DELETE_HERO = new EndpointConfiguration(ROOT, HEROES, DELETE, "{id}");
         public static EndpointConfiguration UPDATE_HERO = new EndpointConfiguration(ROOT, HEROES, UPDATE);
 
         private EndpointConfiguration(params string[] path)
