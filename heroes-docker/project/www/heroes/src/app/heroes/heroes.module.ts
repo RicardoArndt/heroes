@@ -10,6 +10,7 @@ import {HeroSearchModule} from './hero-search/hero-search.module';
 import {HeroService} from './service/hero.service';
 import {LoadingModule} from 'ngx-loading';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { HeroCompareComponent } from './hero-compare/hero-compare.component';
 
 @NgModule({
   declarations: [

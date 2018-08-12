@@ -8,6 +8,9 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Nancy.ModelBinding;
+using System.IO;
+using static System.Net.Mime.MediaTypeNames;
+using System.Text.RegularExpressions;
 
 namespace Heroes.Modules
 {
@@ -25,6 +28,27 @@ namespace Heroes.Modules
                 {
                     List<Hero> heroes = _heroRepository.GetAll();
 
+                    var dir = Directory.GetParent(Directory.GetCurrentDirectory());
+                    var imageId = "";
+
+                    heroes.ForEach(hero =>
+                    {
+                        imageId = hero.Images;
+
+                        if (imageId != "")
+                        {
+                            byte[] reader = File.ReadAllBytes(dir.ToString() + @"\Images\" + imageId);
+
+                            var convert = Convert.ToBase64String(reader);
+
+                            string pattern = @"(dataimage/jpegbase64)";
+                            string replace = "data:image/jpeg;base64,";
+                            var r = Regex.Replace(convert, pattern, replace);
+
+                            hero.Images = r;
+                        }
+                    });
+
                     var heroesJson = JsonConvert.SerializeObject(heroes);
 
                     return heroesJson;
@@ -41,7 +65,16 @@ namespace Heroes.Modules
                 try
                 {
                     var response = this.Bind<HeroDTO>();
-                    Hero hero = new Hero(response.Name, response.Images, response.Atack, response.Defense);
+                    var dir = Directory.GetParent(Directory.GetCurrentDirectory());
+                    Guid imageId = Guid.NewGuid();
+
+                    var replace = response.Images.Replace(":", "").Replace(";", "").Replace(",", "");
+
+                    byte[] data = Convert.FromBase64String(replace);
+
+                    File.WriteAllBytes(dir.ToString() + @"\Images\" + imageId, data);
+
+                    Hero hero = new Hero(response.Name, imageId.ToString(), response.Atack, response.Defense);
                     _heroRepository.Update(hero, response.Id);
 
                     return HttpStatusCode.OK;
@@ -58,7 +91,17 @@ namespace Heroes.Modules
                 try
                 {
                     var response = this.Bind<HeroDTO>();
-                    Hero hero = new Hero(response.Name, response.Images, response.Atack, response.Defense);
+
+                    var dir = Directory.GetParent(Directory.GetCurrentDirectory());
+                    Guid imageId = Guid.NewGuid();
+
+                    var replace = response.Images.Replace(":", "").Replace(";", "").Replace(",", "");
+
+                    byte[] data = Convert.FromBase64String(replace);
+
+                    File.WriteAllBytes(dir.ToString() + @"\Images\" + imageId, data);
+
+                    Hero hero = new Hero(response.Name, imageId.ToString(), response.Atack, response.Defense);
                     _heroRepository.Insert(hero);
 
                     return HttpStatusCode.OK;
@@ -74,11 +117,30 @@ namespace Heroes.Modules
             {
                 try
                 {
-                    var obj = _heroRepository.GetById(parameters.id);
+                    var hero = _heroRepository.GetById(parameters.id);
 
-                    var json = JsonConvert.SerializeObject(obj);
+                    var dir = Directory.GetParent(Directory.GetCurrentDirectory());
+                    var imageId = "";
 
-                    return json;
+                    imageId = hero.Images;
+
+                    if (imageId != "")
+                    {
+                        byte[] reader = File.ReadAllBytes(dir.ToString() + @"\Images\" + imageId);
+
+                        var convert = Convert.ToBase64String(reader);
+
+                        string pattern = @"(dataimage/jpegbase64)";
+                        string replace = "data:image/jpeg;base64,";
+                        var r = Regex.Replace(convert, pattern, replace);
+
+                        hero.Images = r;
+                    }
+
+
+                    var heroesJson = JsonConvert.SerializeObject(hero);
+
+                    return heroesJson;
                 }
                 catch (Exception ex)
                 {
@@ -92,6 +154,18 @@ namespace Heroes.Modules
                 try
                 {
                     var id = parameters.id;
+                    var hero = _heroRepository.GetById(parameters.id);
+
+                    var dir = Directory.GetParent(Directory.GetCurrentDirectory());
+                    var imageId = "";
+
+                    imageId = hero.Images;
+
+                    if (imageId != "")
+                    {
+                        File.Delete(dir.ToString() + @"\Images\" + imageId);
+                    }
+
                     _heroRepository.Delete(id);
 
                     return HttpStatusCode.OK;

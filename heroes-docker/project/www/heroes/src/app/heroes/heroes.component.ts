@@ -28,8 +28,6 @@ export class HeroesComponent implements OnInit {
       .subscribe(response => {
           this.loading = false;
           this.heroes = response;
-          console.log(this.heroes);
-          this.toastr.success('Heróis buscados com sucesso', 'Listagem');
         },
         error => {
           this.loading = false;
@@ -38,7 +36,6 @@ export class HeroesComponent implements OnInit {
   }
 
   search(response: any) {
-    console.log(response.event);
     this.searchHeroes = response.event;
   }
 

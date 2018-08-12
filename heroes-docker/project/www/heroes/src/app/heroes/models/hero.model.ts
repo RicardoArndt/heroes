@@ -1,12 +1,10 @@
-import {Image} from './image.model';
-
 export class Hero {
     public Id: string;
 
     public constructor( public Name: string,
-                        public Images: Image[],
+                        public Images: any,
                         public Atack: number,
-                        public Defense: number){
+                        public Defense: number) {
 
     }
 }

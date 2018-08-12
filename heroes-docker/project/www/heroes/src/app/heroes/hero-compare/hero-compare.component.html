@@ -1,0 +1,20 @@
+<div class="row">
+  <div *ngIf="heroes">
+    <div class="item col-md-3" *ngFor="let hero of heroes | paginate: {itemsPerPage: 8, currentPage: p}">
+      <a (click)="onCompare(hero)" class="thumbnail">
+        <img *ngIf="hero.Images; else notImage" [src]="hero.Images" [alt]="hero.Name"/>
+
+        <ng-template #notImage>
+          <h5>{{ hero.Name }}</h5>
+        </ng-template>
+      </a>
+    </div>
+  </div>
+</div>
+
+<pagination-controls (pageChange)="p = $event"
+                     [responsive]="true"
+                     nextLabel="Próximo"
+                     previousLabel="Anterior"></pagination-controls>
+
+<app-graph *ngIf="!rerender && heroesCompare" [heroesCompare]="heroesCompare"></app-graph>

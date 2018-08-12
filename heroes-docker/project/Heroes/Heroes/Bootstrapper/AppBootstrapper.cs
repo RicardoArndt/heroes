@@ -15,11 +15,14 @@ namespace Heroes.Bootstrapper
 
         protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
         {
+            Nancy.Json.JsonSettings.MaxJsonLength = int.MaxValue;
+            Nancy.Json.JsonSettings.MaxRecursions = 100;
+            Nancy.Json.JsonSettings.RetainCasing = true;
+
             base.ApplicationStartup(container, pipelines);
 
             try
             {
-                Console.WriteLine("ENTROU");
                 var injection = new InjectionGlobalService();
                 InjectionConfigurator.RestGlobalConfiguration(injection);
                 container.Register<ISolutionInjectionService, InjectionGlobalService>(injection);

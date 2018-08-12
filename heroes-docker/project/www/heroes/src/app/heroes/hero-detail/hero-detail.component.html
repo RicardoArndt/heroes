@@ -10,7 +10,7 @@
   </div>
 
   <div class="panel-footer">
-    <!--<button (click)="ex()" class="btn btn-success">Comparar</button>-->
+    <button (click)="compare.open()" class="btn btn-success">Comparar</button>
     <button (click)="novo.open()" class="btn btn-primary">Novo</button>
     <button (click)="onDelete(hero.Id)" class="btn btn-danger">Deletar</button>
   </div>
@@ -18,9 +18,18 @@
 
 <modal #novo>
   <modal-header>
-    <h4>Novo Hero</h4>
+    <h4>Novo herói</h4>
   </modal-header>
   <modal-content>
     <app-hero-form></app-hero-form>
+  </modal-content>
+</modal>
+
+<modal #compare>
+  <modal-header>
+    <h4>Comparação entre heróis</h4>
+  </modal-header>
+  <modal-content>
+    <app-hero-compare [heroCompare]="hero"></app-hero-compare>
   </modal-content>
 </modal>

@@ -7,9 +7,6 @@ namespace Heroes.Database.Repositories
     {
         private const string ENTITY = "heroes";
 
-        public HeroRepository()
-        {
-            Entity = ENTITY;
-        }
+        public HeroRepository() : base("heroes") { } 
     }
 }

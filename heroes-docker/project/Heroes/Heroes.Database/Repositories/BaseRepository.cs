@@ -8,11 +8,15 @@ using System.Collections.Generic;
 
 namespace Heroes.Database.Repositories
 {
-    public class BaseRepository<T> : IBaseRepository<T> where T : IEntity<T>
+    public abstract class BaseRepository<T> : IBaseRepository<T> where T : IEntity<T>
     {
-        public static string Entity = "heroes";
-        private static readonly DBContext<T> _context = new DBContext<T>();
-        private IMongoCollection<T> _collection = _context.getCollection(Entity);
+        public static DBContext<T> _context = new DBContext<T>();
+        public IMongoCollection<T> _collection;
+
+        public BaseRepository(string entity)
+        {
+            _collection = _context.getCollection(entity);
+        }
 
         public virtual List<T> GetAll()
         {

@@ -3,7 +3,7 @@ import {Hero} from '../models/hero.model';
 import {HeroService} from '../service/hero.service';
 import {HeroesError} from '../../error/HeroesError';
 import {ToastrService} from 'ngx-toastr';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-hero-detail',
@@ -11,6 +11,8 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
+
+  private _route: Router;
 
   constructor(private heroService: HeroService,
               private heroError: HeroesError,
@@ -26,7 +28,6 @@ export class HeroDetailComponent implements OnInit {
 
     this.heroService.getById(this.route.snapshot.params['id']).subscribe(response => {
       this.loading = false;
-      console.log(response);
       this.hero = response;
       this.toastr.success('Busca concluída com sucesso', 'Success!');
     }, error => {
@@ -43,7 +44,6 @@ export class HeroDetailComponent implements OnInit {
       this.toastr.success('Deletado com sucesso', 'Success!');
     });
 
-    location.reload();
+    this._route.navigate(['/heroes']);
   }
-
 }

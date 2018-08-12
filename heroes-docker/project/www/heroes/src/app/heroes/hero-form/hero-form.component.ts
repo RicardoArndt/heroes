@@ -22,7 +22,8 @@ export class HeroFormComponent implements OnInit {
               private cd: ChangeDetectorRef,
               private heroService: HeroService,
               private heroError: HeroesError,
-              private toastr: ToastrService) {  }
+              private toastr: ToastrService) {
+  }
 
   ngOnInit() {
     this.createForm();
@@ -53,39 +54,20 @@ export class HeroFormComponent implements OnInit {
    * no final de cada laço pois é necessário limpar o readAsDataURL antes de chamá-lo novamente.
    * @param event
    */
-  onFileChange(event) {
-    const files = event.target.files;
-    let reader = new FileReader();
+  onFileChange($event) {
+    const file = $event.target.files[0];
 
-    if (files && files.length > 0) {
-      for (const file of files) {
-        reader.readAsDataURL(file);
+    if (file.type !== 'image/jpeg') {
+      alert('Favor enviar somente imagens JPEG');
+      location.reload();
+    }else {
+      let reader = new FileReader();
+      reader.onload = (e) => {
+        this.heroForm.get('image').setValue(e.currentTarget['result']);
+        this.hero.Images = this.heroForm.get('image').value.value;
+      };
 
-        reader.onload = (e) => {
-          this.heroForm.get('image').setValue({
-            filename: file.name,
-            filetype: file.type,
-            value: e.currentTarget['result']
-          });
-
-          if (!this.hero.Images) {
-            this.hero.Images = [
-              {
-                Filename: this.heroForm.get('image').value.filename,
-                Filetype: this.heroForm.get('image').value.filetype,
-                Value: this.heroForm.get('image').value.value
-              }
-            ];
-          } else {
-            this.hero.Images.push({
-              Filename: this.heroForm.get('image').value.filename,
-              Filetype: this.heroForm.get('image').value.filetype,
-              Value: this.heroForm.get('image').value.value
-            });
-          }
-        };
-        reader = new FileReader();
-      }
+      reader.readAsDataURL(file);
     }
   }
 
@@ -112,14 +94,11 @@ export class HeroFormComponent implements OnInit {
     if (id) {
       this.hero.Id = id;
 
-      console.log('UPDATE' + JSON.stringify(this.hero));
       this.heroService.update(this.hero).subscribe(response => {
         this.loading = false;
         this.toastr.success('Atualizado com sucesso', 'Success!');
       });
     } else {
-      console.log('SAVE' + JSON.stringify(this.hero));
-
       this.heroService.saveHero(this.hero)
         .subscribe(response => {
           this.loading = false;
@@ -131,7 +110,7 @@ export class HeroFormComponent implements OnInit {
     location.reload();
   }
 
-  getInfo (valor: any): string {
+  getInfo(valor: any): string {
     if (valor != null && valor.actual > valor.max)
       return valor.max;
   }

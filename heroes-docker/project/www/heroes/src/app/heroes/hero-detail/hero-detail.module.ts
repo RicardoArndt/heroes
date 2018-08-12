@@ -5,6 +5,7 @@ import {HeroFormModule} from '../hero-form/hero-form.module';
 import {HeroesRoutingModule} from '../heroes-routing.module';
 import {ModalModule} from 'ngx-modal';
 import {LoadingModule} from 'ngx-loading';
+import {HeroCompareModule} from '../hero-compare/hero-compare.module';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import {LoadingModule} from 'ngx-loading';
     HeroFormModule,
     HeroesRoutingModule,
     ModalModule,
-    LoadingModule
+    LoadingModule,
+    HeroCompareModule
   ],
   declarations: [
     HeroDetailComponent

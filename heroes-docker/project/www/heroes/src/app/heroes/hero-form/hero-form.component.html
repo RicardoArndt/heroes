@@ -7,7 +7,6 @@
 
     <label>Image: </label>
     <image-upload (change)="onFileChange($event)"></image-upload>
-    <!--<input type="file" (change)="onFileChange($event)">-->
 
     <label [ngClass]="{'required': !heroForm.value.atack,
                         'max': heroForm.controls.atack._errors?.max}">Atack: <span>{{ getInfo(heroForm.controls.atack._errors?.max) }}</span></label>

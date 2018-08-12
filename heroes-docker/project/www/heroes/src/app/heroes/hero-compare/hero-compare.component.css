@@ -1,0 +1,16 @@
+.item img {
+  max-height: 160px;
+  margin-bottom: 10px;
+}
+
+.item a {
+  background-color: #790CE8;
+  min-height: 120px;
+}
+
+.item a h5 {
+  color: #FFF;
+  margin-left: 50%;
+  transform: translateX(-35%);
+  margin-top: 25%;
+}

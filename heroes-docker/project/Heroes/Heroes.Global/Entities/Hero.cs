@@ -17,7 +17,7 @@ namespace Heroes.Global.Entities
         [BsonElement("name")]
         public string Name { get; set; }
         [BsonElement("images")]
-        public List<Image> Images { get; set; }
+        public string Images { get; set; }
         [BsonElement("atack")]
         public int Atack { get; set; }
         [BsonElement("defense")]
@@ -25,7 +25,7 @@ namespace Heroes.Global.Entities
 
         public Hero() { }
 
-        public Hero(string name, List<Image> images, int atack, int defense)
+        public Hero(string name, string images, int atack, int defense)
         {
             Name = name;
             Images = images;
