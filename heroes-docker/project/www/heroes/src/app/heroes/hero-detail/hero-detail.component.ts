@@ -37,13 +37,9 @@ export class HeroDetailComponent implements OnInit {
   }
 
   onDelete(id: string) {
-    this.loading = true;
-
     this.heroService.delete(id).subscribe(() => {
-      this.loading = false;
+      this._route.navigate(['/heroes']);
       this.toastr.success('Deletado com sucesso', 'Success!');
     });
-
-    this._route.navigate(['/heroes']);
   }
 }

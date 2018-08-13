@@ -1,4 +1,6 @@
 ﻿using Heroes.Database.Repositories.Interfaces;
+using Heroes.Services;
+using Heroes.Services.Interfaces;
 
 namespace Heroes.DependencyInjection.Infra.Interfaces
 {
@@ -7,5 +9,7 @@ namespace Heroes.DependencyInjection.Infra.Interfaces
         //Repositórios aqui
         //Repository Instance { get; set; }
         IHeroRepository IHeroRepositoryInstance { get; set; }
+        IImageService IImageServiceInstance { get; set; }
+        IHeroService IHeroServiceInstance { get; set; }
     }
 }

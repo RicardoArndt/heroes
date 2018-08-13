@@ -44,6 +44,10 @@
     <Compile Include="GlobalApi\InjectionConfigurator.cs" />
     <Compile Include="Modules\HeroModule.cs" />
     <Compile Include="RestDomain\EndpointConfiguration.cs" />
+    <Compile Include="Services\HeroService.cs" />
+    <Compile Include="Services\ImageService.cs" />
+    <Compile Include="Services\Interfaces\IHeroService.cs" />
+    <Compile Include="Services\Interfaces\IImageService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
